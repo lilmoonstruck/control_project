@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи — Итальянский язык – проще простого</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body id="top" bgcolor="#fffaf0" text="#363a2f" link="#556B2F" vlink="#795841">
+<font face="Georgia">
+<table width="88%" align="center" cellpadding="8">
+<tr><td>
+    <p align="center">
+        <a href="index.html"><img src="image/book.png" width="45" height="45" align="middle" alt="Книга — на главную"></a>
+        &nbsp; <font size="5" color="#556B2F"><b>Итальянский язык – проще простого</b></font>
+    </p>
+    <p align="center"><i>Язык, общение и немного Италии</i></p>
+    <p align="center" class="main-nav"><a href="index.html">Знакомство</a> &nbsp; / &nbsp; <a href="info.html">Занятия</a> &nbsp; / &nbsp; <a href="photo.html">Немного Италии</a> &nbsp; / &nbsp; <a href="table.html">Стоимость</a> &nbsp; / &nbsp; <a href="form.html">Записаться</a></p>
+    <p align="center"><font size="2"><a href="info.html#plan">Что будем изучать</a> &nbsp; · &nbsp;
+        <a href="https://www.treccani.it/vocabolario/" target="_blank" rel="noopener">Итальянский словарь ↗</a></font></p>
+    <hr color="#d4c9ae" size="1">
+
+
+<h1><font color="#556B2F">Решение алгоритмической задачи</font></h1>
+<h2>Задача № 1002</h2>
+<p name="formulation">Дано вещественное число. Определить, какое это число: положительное, отрицательное, ноль.</p>
+
+<form action="https://httpbin.org/post" id="UserEnter" name="UserEnter" method="post" target="_blank">
+    <ul>
+        <li>Для поисковика: <input name="q" value="search"></li>
+        <li>Формулировка задачи:
+            <br><textarea cols="60" rows="4" id="task" name="formulation">Дано вещественное число. Определить, какое это число: положительное, отрицательное, ноль.</textarea>
+        </li>
+        <li>Введите число A: <input id="a" name="a" type="number" step="any" value="3.5"></li>
+        <li>Результат решения задачи: <input id="result" name="result" value="не определен"></li>
+        <li>действие 1: <input id="verify" type="button" value="Проверить" onclick="verify_number()"></li>
+        <li>действие 2: <input id="send" type="button" value="Отправить" onclick="send_form()"></li>
+    </ul>
+</form>
+
+<script>
+    function verify_number() {
+        let field = document.getElementById('a');
+        let result = document.getElementById('result');
+        let a = Number(field.value);
+
+        if (field.value === '' || !Number.isFinite(a)) {
+            result.value = 'Введите число';
+            return;
+        }
+
+        if (a > 0) {
+            result.value = 'Число положительное';
+        } else if (a < 0) {
+            result.value = 'Число отрицательное';
+        } else {
+            result.value = 'Это ноль';
+        }
+    }
+
+    function send_form() {
+        verify_number();
+        if (document.getElementById('result').value === 'Введите число') {
+            return;
+        }
+        document.getElementById('UserEnter').submit();
+    }
+</script>
+
+    <br>
+    <hr color="#d4c9ae" size="1">
+    <p align="center" class="educational-nav"><font size="2">Учебная часть: <a href="DOM.html">DOM_JS. Считываем информацию из DOM</a> &nbsp; · &nbsp; <a href="passport.html">Изменяем кириллицу на латиницу по клику</a> <br> <a href="task.html" aria-current="page"><b><font color="#9b5137">Решение алгоритмической задачи</font></b></a></font></p>
+    <p align="center"><font size="2">Коробко Мария · Итальянский язык &nbsp; | &nbsp; <a href="#top">Наверх ↑</a></font></p>
+</td></tr>
+</table>
+</font>
+</body>
+</html>
