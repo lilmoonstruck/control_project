@@ -1,0 +1,46 @@
+.main-nav a,
+.educational-nav a {
+    display: inline-block;
+    border-radius: 6px;
+    color: #556B2F;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a {
+    padding: 7px 10px;
+}
+
+.educational-nav a {
+    padding: 5px 8px;
+    margin: 2px 0;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.educational-nav a:hover,
+.educational-nav a:focus-visible {
+    background-color: #9b5137;
+    color: #fffaf0 !important;
+    text-decoration: none;
+}
+
+.main-nav a:hover font,
+.main-nav a:focus-visible font,
+.educational-nav a:hover font,
+.educational-nav a:focus-visible font {
+    color: #fffaf0 !important;
+}
+
+.main-nav a[aria-current="page"],
+.educational-nav a[aria-current="page"] {
+    color: #9b5137;
+    font-weight: bold;
+}
+
+.main-nav a[aria-current="page"]:hover,
+.main-nav a[aria-current="page"]:focus-visible,
+.educational-nav a[aria-current="page"]:hover,
+.educational-nav a[aria-current="page"]:focus-visible {
+    color: #fffaf0 !important;
+}
